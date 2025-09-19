@@ -1,0 +1,52 @@
+---
+const heading = 'Ready to make';
+const headingEm = 'IT easy?';
+const subcopy = "Let's map a plan that fits your goals and budget. We'll take the time to understand your needs and design a solution that just works—day in, day out.";
+const primary = {
+  label: 'Schedule Discovery Call',
+  href: 'mailto:Info@tctinfotech.com?subject=Discovery Call Request',
+  classes: 'px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full text-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-xl hover:shadow-2xl'
+};
+const secondary = {
+  label: 'Get Tailored IT Roadmap',
+  href: 'mailto:Info@tctinfotech.com?subject=Tailored Quote Request',
+  classes: 'px-10 py-5 border-2 border-white/30 hover:border-white/50 text-white rounded-full text-lg font-semibold transition-all duration-200 backdrop-blur-sm hover:bg-white/10'
+};
+const contact = { intro: 'Email us directly', email: 'Info@tctinfotech.com', emailLink: 'mailto:Info@tctinfotech.com' };
+const responseTime = 'Within 24 hours';
+const highlights = [
+  { title: 'No Surprise Costs', subtitle: 'Transparent pricing', iconBg: 'bg-gradient-to-br from-green-500 to-green-600', iconSvg: `<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>` },
+  { title: 'Senior Engineers', subtitle: 'You can actually reach', iconBg: 'bg-gradient-to-br from-blue-500 to-blue-600', iconSvg: `<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>` },
+  { title: 'Business-First', subtitle: 'Not tech-first approach', iconBg: 'bg-gradient-to-br from-purple-500 to-purple-600', iconSvg: `<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>` }
+];
+---
+
+<section class="py-20 px-6 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-transparent relative overflow-hidden">
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">{heading} <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">{headingEm}</span></h2>
+    <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">{subcopy}</p>
+    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+      <a href={primary.href} class={primary.classes}>{primary.label}</a>
+      <a href={secondary.href} class={secondary.classes}>{secondary.label}</a>
+    </div>
+    <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 max-w-2xl mx-auto">
+      <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center"> <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 7.89c.39.39 1.02.39 1.41 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></div>
+          <div class="text-left"><div class="text-sm text-gray-400">{contact.intro}</div><a href={contact.emailLink} class="text-white font-semibold hover:text-blue-400 transition-colors">{contact.email}</a></div>
+        </div>
+        <div class="w-px h-12 bg-white/20 hidden sm:block"></div>
+        <div class="text-center sm:text-left"><div class="text-sm text-gray-400">Response time</div><div class="text-white font-semibold">{responseTime}</div></div>
+      </div>
+    </div>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+      {highlights.map((h) => (
+        <div class="text-center">
+          <div class={`w-8 h-8 ${h.iconBg} rounded-lg mx-auto mb-3 flex items-center justify-center`} set:html={h.iconSvg}></div>
+          <div class="text-white font-medium">{h.title}</div>
+          <div class="text-gray-400 text-sm">{h.subtitle}</div>
+        </div>
+      ))}
+    </div>
+    <div class="mt-16 border-t border-white/20 pt-8"><p class="text-gray-400 text-lg"><span class="font-semibold text-white">TCT Infotech</span> — dependable, cutting-edge IT support for organizations that are serious about growth.</p></div>
+  </div>

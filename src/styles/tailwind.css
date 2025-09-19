@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Preserve existing font utility used in page */
+.font-inter { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+
+/* Small reset for body background to match previous site */
+:root { --bg-color: #04070D; }
+body { background-color: var(--bg-color); }

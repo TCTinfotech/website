@@ -1,0 +1,75 @@
+---
+const heading = "Who we're";
+const headingEm = 'best for';
+const subcopy = 'We work with organizations that understand technology is a business enabler, not just a necessary cost.';
+const cards = [
+  {
+    title: 'Growing Organizations',
+    desc: "Teams that need reliable, secure IT without building a massive internal team. You want technology that scales with your ambitions.",
+    containerFrom: 'from-blue-900/20',
+    containerTo: 'to-blue-800/10',
+    border: 'border-blue-500/20',
+    iconFrom: 'from-blue-500',
+    iconTo: 'to-blue-600',
+    icon: 'growth',
+  },
+  {
+    title: 'Accountable Leaders',
+    desc: 'Decision-makers who want an accountable partner, not just another vendor. You expect clear communication and measurable results.',
+    containerFrom: 'from-green-900/20',
+    containerTo: 'to-green-800/10',
+    border: 'border-green-500/20',
+    iconFrom: 'from-green-500',
+    iconTo: 'to-green-600',
+    icon: 'leaders',
+  },
+  {
+    title: 'Compliance-Focused',
+    desc: "Organizations with compliance requirements who can't afford guesswork. You need HIPAA, PCI, or other standards handled properly.",
+    containerFrom: 'from-purple-900/20',
+    containerTo: 'to-purple-800/10',
+    border: 'border-purple-500/20',
+    iconFrom: 'from-purple-500',
+    iconTo: 'to-purple-600',
+    icon: 'compliance',
+  },
+];
+const industries = {
+  heading: 'Industries We Support',
+  copy: 'Organizations of all sizes across regulated and non-regulated sectors—including those with HIPAA/PCI obligations. From healthcare and finance to manufacturing and professional services, we understand your unique challenges.'
+};
+---
+
+<section class="py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">{heading} <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">{headingEm}</span></h2>
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto">{subcopy}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {cards.map((c) => (
+        <div class={`bg-gradient-to-br ${c.containerFrom} ${c.containerTo} border ${c.border} rounded-2xl p-8 text-center hover:from-opacity-30 hover:border-opacity-30 transition-all duration-300`} role="article">
+          <div class={`w-16 h-16 bg-gradient-to-br ${c.iconFrom} ${c.iconTo} rounded-2xl mx-auto mb-6 flex items-center justify-center`}>
+            {c.icon === 'growth' ? (
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+            ) : c.icon === 'leaders' ? (
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+            ) : (
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+            )}
+          </div>
+          <h3 class="text-2xl font-bold mb-4">{c.title}</h3>
+          <p class="text-gray-400 leading-relaxed">{c.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-16 text-center">
+      <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto">
+        <h3 class="text-xl font-semibold mb-4">{industries.heading}</h3>
+        <p class="text-gray-400">{industries.copy}</p>
+      </div>
+    </div>
+  </div>
+</section>

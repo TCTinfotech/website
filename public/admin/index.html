@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Content Manager</title>
+    <!-- Netlify Identity Widget (for login) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Decap (Netlify) CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  </head>
+  <body>
+    <h1 style="display:none">Netlify CMS</h1>
+    <script>
+      // Optional: initialize the identity widget so users can log in via Netlify Identity
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', function(user) {
+          // no-op
+        });
+      }
+    </script>
+    <!-- The CMS will auto-load /admin/config.yml -->
+  </body>
+</html>

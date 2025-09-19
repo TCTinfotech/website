@@ -1,0 +1,58 @@
+---
+const headlinePart1 = 'Make IT';
+const headlineEm = 'effortless';
+const headlinePart2 = "—so growth isn't optional";
+const subcopy = `When technology just works, your business moves faster, serves customers better, and sleeps easier at night. TCT Infotech delivers dependable, cutting-edge IT support that keeps you secure, online, and scaling—without the chaos or surprise costs.`;
+const primaryCTA = { href: 'mailto:Info@tctinfotech.com', label: 'Schedule Discovery Call' };
+const secondaryCTA = { href: 'mailto:Info@tctinfotech.com', label: 'Get Tailored Quote' };
+const badges = [
+  { title: 'Network', subtitle: 'Management', colorFrom: 'from-blue-900/30', colorTo: 'to-blue-800/10' },
+  { title: 'Cloud', subtitle: 'Solutions', colorFrom: 'from-green-900/30', colorTo: 'to-green-800/10' },
+  { title: 'Data', subtitle: 'Backup', colorFrom: 'from-purple-900/30', colorTo: 'to-purple-800/10' },
+  { title: 'Remote', subtitle: 'Monitoring', colorFrom: 'from-orange-900/30', colorTo: 'to-orange-800/10' },
+];
+---
+
+<section class="pt-32 pb-20 px-6 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-transparent"></div>
+  <div class="absolute top-20 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+  <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">{headlinePart1} <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">{headlineEm}</span>{headlinePart2}</h1>
+  <p class="text-xl md:text-2xl text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">{subcopy}</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href={primaryCTA.href} class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full text-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">{primaryCTA.label}</a>
+      <a href={secondaryCTA.href} class="px-8 py-4 border border-white/20 hover:border-white/40 text-white rounded-full text-lg font-medium transition-all duration-200 backdrop-blur-sm">{secondaryCTA.label}</a>
+    </div>
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <!-- Four service badges (titles pulled from frontmatter) -->
+      <div class="group bg-gradient-to-br from-blue-900/30 to-blue-800/10 backdrop-blur-sm border border-blue-500/20 rounded-xl p-6 hover:from-blue-900/40 hover:border-blue-400/30 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 text-center">
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" /></svg>
+        </div>
+        <div class="text-sm font-semibold text-white mb-1 group-hover:text-blue-300 transition-colors">{badges[0].title}</div>
+        <div class="text-xs text-blue-300/80 group-hover:text-blue-200 transition-colors">{badges[0].subtitle}</div>
+      </div>
+      <div class="group bg-gradient-to-br from-green-900/30 to-green-800/10 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 hover:from-green-900/40 hover:border-green-400/30 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300 text-center">
+        <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
+        </div>
+        <div class="text-sm font-semibold text-white mb-1 group-hover:text-green-300 transition-colors">{badges[1].title}</div>
+        <div class="text-xs text-green-300/80 group-hover:text-green-200 transition-colors">{badges[1].subtitle}</div>
+      </div>
+      <div class="group bg-gradient-to-br from-purple-900/30 to-purple-800/10 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:from-purple-900/40 hover:border-purple-400/30 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 text-center">
+        <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
+        </div>
+        <div class="text-sm font-semibold text-white mb-1 group-hover:text-purple-300 transition-colors">{badges[2].title}</div>
+        <div class="text-xs text-purple-300/80 group-hover:text-purple-200 transition-colors">{badges[2].subtitle}</div>
+      </div>
+      <div class="group bg-gradient-to-br from-orange-900/30 to-orange-800/10 backdrop-blur-sm border border-orange-500/20 rounded-xl p-6 hover:from-orange-900/40 hover:border-orange-400/30 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 text-center">
+        <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+        </div>
+        <div class="text-sm font-semibold text-white mb-1 group-hover:text-orange-300 transition-colors">{badges[3].title}</div>
+        <div class="text-xs text-orange-300/80 group-hover:text-orange-200 transition-colors">{badges[3].subtitle}</div>
+      </div>
+    </div>
+  </div>
+</section>

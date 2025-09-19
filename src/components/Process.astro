@@ -1,0 +1,54 @@
+---
+const heading = 'How we work';
+const headingEm = '(simple, transparent, effective)';
+const subcopy = 'Our proven process ensures you get the IT foundation your business needs without the complexity or surprises.';
+const steps = [
+  { number: '1', title: 'Discovery Call', colorFrom: 'from-blue-500', colorTo: 'to-blue-600', titleColor: 'text-blue-400', desc: 'We learn your goals, constraints, and what "good" looks like for your organization.' },
+  { number: '2', title: 'Assessment', colorFrom: 'from-green-500', colorTo: 'to-green-600', titleColor: 'text-green-400', desc: 'Deep dive into infrastructure, risks, workflows, and user needs to understand your current state.' },
+  { number: '3', title: 'Roadmap', colorFrom: 'from-purple-500', colorTo: 'to-purple-600', titleColor: 'text-purple-400', desc: 'A clear, prioritized plan with timelines and investment ranges tailored to your business.' },
+  { number: '4', title: 'Implementation', colorFrom: 'from-orange-500', colorTo: 'to-orange-600', titleColor: 'text-orange-400', desc: 'Senior engineers execute with minimal disruption to your daily operations.' },
+  { number: '5', title: 'Proactive Monitoring', colorFrom: 'from-teal-500', colorTo: 'to-teal-600', titleColor: 'text-teal-400', desc: 'Continuous oversight, alerts, and improvements to keep everything running smoothly.' },
+  { number: '6', title: 'Quarterly Review', colorFrom: 'from-indigo-500', colorTo: 'to-indigo-600', titleColor: 'text-indigo-400', desc: 'Align IT with changing business priorities and plan for future growth.' },
+];
+const results = [
+  { title: 'Fewer tickets, faster resolutions', sub: 'More productive people', colorFrom: 'from-green-500', colorTo: 'to-green-600', icon: `<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>` },
+  { title: 'Less downtime', sub: 'Protected revenue and reputation', colorFrom: 'from-blue-500', colorTo: 'to-blue-600', icon: `<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>` },
+  { title: 'Tighter security & compliance', sub: 'Reduced risk and easier audits', colorFrom: 'from-purple-500', colorTo: 'to-purple-600', icon: `<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>` },
+  { title: 'Clear visibility', sub: 'No more guessing what\'s happening', colorFrom: 'from-orange-500', colorTo: 'to-orange-600', icon: `<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>` },
+  { title: 'Scalable foundations', sub: 'Expand confidently', colorFrom: 'from-teal-500', colorTo: 'to-teal-600', icon: `<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12"></path></svg>` }
+];
+---
+
+<section id="process" class="py-20 px-6 bg-gradient-to-b from-blue-900/5 to-transparent">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">{heading} <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">{headingEm}</span></h2>
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto">{subcopy}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {steps.map((s) => (
+        <div class="relative">
+          <div class={`absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br ${s.colorFrom} ${s.colorTo} rounded-full flex items-center justify-center text-white font-bold text-sm z-10`}>{s.number}</div>
+          <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+            <h3 class={`text-xl font-semibold mb-3 ${s.titleColor}`}>{s.title}</h3>
+            <p class="text-gray-400">{s.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-3xl p-8 md:p-12">
+      <h3 class="text-3xl font-bold mb-8 text-center">Results you can <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">feel</span></h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {results.map((r, i) => (
+          <div class="text-center">
+            <div class={`w-12 h-12 bg-gradient-to-br ${r.colorFrom} ${r.colorTo} rounded-xl mx-auto mb-4 flex items-center justify-center`} set:html={r.icon}></div>
+            <h4 class="font-semibold mb-2">{r.title}</h4>
+            <p class="text-gray-400 text-sm">{r.sub}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

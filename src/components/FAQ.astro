@@ -1,0 +1,37 @@
+---
+const heading = 'Frequently Asked';
+const headingEm = 'Questions';
+const subcopy = 'Common questions about our services and approach to IT support.';
+const faqs = [
+  { q: 'Do you support both on-site and remote teams?', a: 'Yes. We support hybrid environments with secure access, reliable connectivity, and consistent user experience whether your team is in the office, at home, or distributed globally.', titleColor: 'text-blue-400', titleHover: 'group-hover:text-blue-300', iconColor: 'text-blue-400', iconHover: 'group-hover:text-blue-300' },
+  { q: 'Can you work with our existing tools?', a: 'Absolutely. We integrate with what you have and recommend upgrades only when they deliver clear value. Our goal is to optimize your current setup before suggesting costly replacements.', titleColor: 'text-green-400', titleHover: 'group-hover:text-green-300', iconColor: 'text-green-400', iconHover: 'group-hover:text-green-300' },
+  { q: 'How do you price engagements?', a: 'We tailor pricing to scope and goals to stay cost-effective while meeting your standards for security, uptime, and performance. No hidden fees or surprise costs—just transparent pricing aligned with your business needs.', titleColor: 'text-purple-400', titleHover: 'group-hover:text-purple-300', iconColor: 'text-purple-400', iconHover: 'group-hover:text-purple-300' },
+  { q: 'What industries do you support?', a: 'Organizations of all sizes across regulated and non-regulated sectors—including those with HIPAA/PCI obligations. We have experience with healthcare, finance, manufacturing, professional services, and more.', titleColor: 'text-orange-400', titleHover: 'group-hover:text-orange-300', iconColor: 'text-orange-400', iconHover: 'group-hover:text-orange-300' },
+  { q: 'How quickly can you respond to issues?', a: 'Our proactive monitoring catches most issues before they impact your team. For urgent matters, we provide rapid response with real engineers you can actually reach—no endless phone trees or offshore call centers.', titleColor: 'text-teal-400', titleHover: 'group-hover:text-teal-300', iconColor: 'text-teal-400', iconHover: 'group-hover:text-teal-300' },
+  { q: 'Do you handle compliance and security audits?', a: 'Yes. We help implement and maintain security controls, document processes, and prepare for audits. Whether it\'s HIPAA, PCI, SOC 2, or other standards, we ensure you\'re audit-ready with confidence.', titleColor: 'text-indigo-400', titleHover: 'group-hover:text-indigo-300', iconColor: 'text-indigo-400', iconHover: 'group-hover:text-indigo-300' },
+];
+---
+
+<section class="py-20 px-6 bg-gradient-to-b from-transparent to-blue-900/5">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Frequently Asked <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Questions</span></h2>
+      <p class="text-xl text-gray-400">Common questions about our services and approach to IT support.</p>
+    </div>
+      <div class="space-y-4">
+      {faqs.map((f) => (
+      <div class="faq-item bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300">
+        <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-white/5 transition-colors duration-200 group">
+          <h3 class={`text-xl font-semibold ${f.titleColor} ${f.titleHover} transition-colors`}>{f.q}</h3>
+          <div class="faq-icon ml-4 flex-shrink-0"><svg class={`w-6 h-6 ${f.iconColor} transition-all duration-300 ${f.iconHover}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg></div>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+          <div class="p-6 pt-0 border-t border-white/5"><p class="text-gray-400 leading-relaxed">{f.a}</p></div>
+        </div>
+      </div>
+      ))}
+    </div>
+    </div>
+    <script type="module" src="/js/faq-toggle.js"></script>
+  </div>
+</section>

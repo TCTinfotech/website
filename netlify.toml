@@ -1,0 +1,23 @@
+# Netlify configuration for Astro static site (pnpm-aware)
+# Place this file at the project root.
+
+[build]
+  # Use corepack to ensure pnpm is available, install deps, then build
+  command = "corepack enable && corepack prepare pnpm@latest --activate && pnpm install && pnpm build"
+  publish = "dist"
+
+# Set Node version for Netlify's build image (optional but recommended)
+[context.production.environment]
+  NODE_VERSION = "18"
+
+# Uncomment and set functions directory when using SSR/Netlify adapter
+# [build]
+#   command = "corepack enable && corepack prepare pnpm@latest --activate && pnpm install && pnpm build"
+#   publish = "dist"
+#   functions = "netlify/functions"
+
+# Example redirect for single-page-app fallback (if you use client-side routing)
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
