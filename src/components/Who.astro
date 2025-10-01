@@ -34,10 +34,6 @@ const cards = [
     icon: 'compliance',
   },
 ];
-const industries = {
-  heading: 'Industries We Support',
-  copy: 'Organizations of all sizes across regulated and non-regulated sectors—including those with HIPAA/PCI obligations. From healthcare and finance to manufacturing and professional services, we understand your unique challenges.'
-};
 ---
 
 <section class="py-20 px-6">
@@ -63,13 +59,6 @@ const industries = {
           <p class="text-gray-400 leading-relaxed">{c.desc}</p>
         </div>
       ))}
-    </div>
-
-    <div class="mt-16 text-center">
-      <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto">
-        <h3 class="text-xl font-semibold mb-4">{industries.heading}</h3>
-        <p class="text-gray-400">{industries.copy}</p>
-      </div>
     </div>
   </div>
 </section>
